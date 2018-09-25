@@ -4,8 +4,8 @@
 
     //填充文章
     function putInArticle(data) {
-        $('.zhy-article-top').html('');
-        $('.zhy-article-footer').html('');
+        $('.qinxianyun-article-top').html('');
+        $('.qinxianyun-article-footer').html('');
         var articleTop = $('<article-top><div class="article-title">' +
             '<h1>' + data.articleTitle + '</h1>' +
             '</div>' +
@@ -23,9 +23,9 @@
             '<i class="am-icon-folder"> <a class="articleCategoryColor" href="/categories?category=' + data.articleCategories + '">' + data.articleCategories + '</a></i>' +
             '</div>' +
             '</div></article-top><div class="article-i-say">' +
-            '多年以后，愿你的城市，有清风，有烈酒，也有人是你的归途。<span class="article-i-say-me">--- 张海洋</span>' +
+            '多年以后，愿你的城市，有清风，有烈酒，也有人是你的归途。<span class="article-i-say-me">--- 秦仙云</span>' +
             '</div>');
-        $('.zhy-article-top').append(articleTop);
+        $('.qinxianyun-article-top').append(articleTop);
         $("#mdText").text(data.articleContent);
         var wordsView;
         wordsView = editormd.markdownToHTML("wordsView", {
@@ -42,9 +42,9 @@
             '<div class="show-weixin">' +
             '<p><i class="weiXinQuoteLeft fa fa-quote-left fa-lg"></i></p><br>' +
             '<p class="show-weixin-pic">' +
-            '<img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/weixin.jpg">' +
+            '<img src="https://qinxianyun-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/weixin.jpg">' +
             '</p>' +
-            '<p class="show-weixin-pic">欢迎关注我的微信公众号：zhyocean1314</p>' +
+            '<p class="show-weixin-pic">欢迎关注我的微信公众号：Qinxianyun1314</p>' +
             '<p><i class="weiXinQuoteRight fa fa-quote-right fa-lg"></i></p>' +
             '</div>' +
             '<div>' +
@@ -65,7 +65,7 @@
             '<span class="article-next">' +
             '</span>' +
             '</div>');
-        $('.zhy-article-footer').append(articleFooter);
+        $('.qinxianyun-article-footer').append(articleFooter);
         var tags = $('<div class="tags"></div>');
         for(var i=0;i<data.articleTags.length;i++){
             var tag = $('<i class="am-icon-tag"></i><a class="articleTagColor" href="/tags?tag=' + data.articleTags[i] + '"> ' + data.articleTags[i] + '</a>');
@@ -106,7 +106,7 @@
             $('.likeHeart').find('i').removeClass("am-icon-heart-o");
             $('.likeHeart').find('i').addClass("am-icon-heart");
         }
-        $('.other').append($('<div class="social-share" data-initialized="true" data-url="https://www.zhyocean.cn/findArticle?articleId=' + data.articleId + '&originalAuthor='+ data.originalAuthor + '"  data-title="' + data.articleTitle + '">' +
+        $('.other').append($('<div class="social-share" data-initialized="true" data-url="https://www.Qinxianyun.cn/findArticle?articleId=' + data.articleId + '&originalAuthor='+ data.originalAuthor + '"  data-title="' + data.articleTitle + '">' +
             '<a href="#" class="social-share-icon icon-qq" data-am-popover="{content: \'分享至QQ好友\', trigger: \'hover focus\'}"></a>' +
             '<a href="#" class="social-share-icon icon-qzone" data-am-popover="{content: \'分享至QQ空间\', trigger: \'hover focus\'}"></a>' +
             '<a href="#" class="social-share-icon icon-wechat"></a>' +
@@ -482,8 +482,8 @@
                 putInArticle(data);
             } else {
                 $('.content').html('');
-                var error = $('<div class="article"><div class="zhy-article-top"><div class="error">' +
-                    '<img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/register_success.jpg">' +
+                var error = $('<div class="article"><div class="qinxianyun-article-top"><div class="error">' +
+                    '<img src="https://qinxianyun-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/register_success.jpg">' +
                     '<p>没有找到这篇文章哦</p>' +
                     '<p>可能不小心被博主手残删掉了吧</p>' +
                     '<div class="row">' +

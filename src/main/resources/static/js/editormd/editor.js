@@ -40,7 +40,7 @@
         });
 
     var publishBtn = $('.publishBtn');
-    var articleTitle = $('#zhy-editor-title');
+    var articleTitle = $('#qinxianyun-editor-title');
     var articleContent = $('#my-editormd-html-code');
     var noticeBoxTitle = $('.notice-box-title');
     var noticeBoxContent = $('.notice-box-content');
@@ -142,7 +142,7 @@
         dataType:"json",
         success:function (data) {
             if(data['status'] == 201){
-                $('#zhy-editor-title').val(data['result']['articleTitle']);
+                $('#qinxianyun-editor-title').val(data['result']['articleTitle']);
                 $('#my-editormd-markdown-doc').html(data['result']['articleContent']);
                 $('#select-type').val(data['result']['articleType']);
                 $('#select-grade').val(data['result']['articleGrade']);

@@ -3,7 +3,7 @@
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <head>
     <meta charset="UTF-8">
-    <title>程序猿张先森 | 写文章</title>
+    <title>秦仙云 | 写文章</title>
 
     <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/amazeui/2.7.2/css/amazeui.min.css">
@@ -30,7 +30,7 @@
         <div class="header">
             <div class="am-topbar" style="margin-bottom: 0">
                 <h1 class="am-topbar-brand">
-                    <a href="/"><img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/zhy.png" class="imgStyle">程序猿张先森</a>
+                    <a href="/"><img src="https://zhy-myblog.oss-cn-shenzhen.aliyuncs.com/static/img/zhy.png" class="imgStyle">秦仙云</a>
                 </h1>
 
                 <div class="am-collapse am-topbar-collapse" id="doc-topbar-collapse" style="text-align: center">
@@ -38,17 +38,7 @@
                     <div class="editor-title"><i class="editor-welcome">Welcome to</i><i class="editor-title-name">张先森</i><i class="editor-title-words">的创作中心</i></div>
 
                     <div class="am-topbar-right" th:if="${#httpServletRequest.remoteUser}">
-                        <!--<div class="am-dropdown" data-am-dropdown="{boundary: '.am-topbar'}">-->
                             <span class="personalSpace am-btn am-btn-secondary am-topbar-btn am-btn-sm am-dropdown-toggle" data-am-dropdown-toggle><span sec:authentication="name"></span> </span>
-                            <!--<ul class="am-dropdown-content">-->
-                                <!--<li><a href="/user">个人主页</a></li>-->
-                                <!--<li><a href="#">账户管理</a></li>-->
-                                <!---->
-                                <!--<li><a class="feedbackClick">反馈</a></li>-->
-                                <!--<hr style="margin: 0">-->
-                                <!--<li><a th:href="@{/logout}">退出登录</a></li>-->
-                            <!--</ul>-->
-                        <!--</div>-->
                     </div>
                     <div class="am-topbar-right" th:unless="${#httpServletRequest.remoteUser}">
                         <a href="/register" class="am-btn am-btn-primary am-topbar-btn am-btn-sm" style="color: white">注册</a>
